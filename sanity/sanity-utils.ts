@@ -1,29 +1,43 @@
 import { createClient} from "next-sanity";
 import {groq} from "next-sanity";
+import {Post} from "@/types/Post";
+import clientConfig from "@/sanity/config/client-config";
 
-export async function getPosts() {
+export async function getPosts(): Promise<Post[]> {
 
-    const client = createClient({
-        projectId: 'ajuxh6n2',
-        dataset: 'production',
-        apiVersion: '2025-02-02',
-    });
-
-    return client.fetch(
+    return createClient(clientConfig).fetch(
         groq`*[_type == "post"] | order(publishedAt desc) {
     _id,
+    _createdAt,
     title,
     "slug": slug.current,
     "date": publishedAt,
     "authorName": author->name,
-    "featuredImage": featuredImage{
-      "url": asset->url,
-      "alt": alt
-    },
+    "image": image.asset->url,
     excerpt,
-    "categories": categories[]->title,
-    isFeatured
+    url,
+    content
   }`
     )
 }
 
+export async function getPost(slug:string): Promise<Post> {
+
+
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "post" && slug.current == $slug][0] {
+    _id,
+    _createdAt,
+    title,
+    "slug": slug.current,
+    "date": publishedAt,
+    "authorName": author->name,
+    "image": image.asset->url,
+    excerpt,
+    url,
+    content
+  }`,
+    { slug }
+    );
+
+}

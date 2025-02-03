@@ -36,20 +36,7 @@ const post = {
             },
             validation: (Rule: any) => Rule.required(),
         },
-        {
-            name: 'featuredImage',
-            title: 'Featured Image',
-            type: 'image',
-            options: { hotspot: true },
-            fields: [
-                {
-                    name: 'alt',
-                    title: 'Alt Text',
-                    type: 'string',
-                    validation: (Rule: any) => Rule.required(),
-                },
-            ],
-        },
+
         {
             name: 'excerpt',
             title: 'Excerpt',
@@ -131,7 +118,7 @@ const post = {
         select: {
             title: 'title',
             author: 'author.name',
-            media: 'featuredImage',
+            media: 'author.profileImage',
         },
         prepare(selection: any) {
             const { author } = selection

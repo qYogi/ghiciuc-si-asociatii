@@ -1,0 +1,48 @@
+body {
+    background:
+        /* Very subtle diagonal texture */
+            repeating-linear-gradient(
+                    45deg,
+                    rgba(13, 23, 56, 0.02) 0px,
+                    rgba(13, 23, 56, 0.02) 30px,
+                    rgba(184, 159, 114, 0.02) 30px,
+                    rgba(184, 159, 114, 0.02) 60px
+            ),
+                /* Base background color */
+            #eeeeee; /* Slightly off-white */
+    min-height: 100vh;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-svg{
+    width: 100%;
+    height: auto;
+}
+
+
+.container{
+    display: flex;
+    justify-content: flex-start;
+
+    background-color: #fafafa;
+    width: 80%;
+    box-shadow: 0 0 10px 5px rgba(13, 23, 56, 0.10);
+}
+
+hr{
+    border: 2px solid var(--navyBlue);
+}
+
+.container h1 {
+    color: var(--charcoal);
+}
+
+.date-auth{
+    color: var(--lightCharcoal);
+}
+
+.content {
+    color: var(--charcoal);
+}
