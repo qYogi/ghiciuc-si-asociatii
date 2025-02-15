@@ -1,0 +1,78 @@
+/* From Uiverse.io by dylanharriscameron */
+.card {
+    position: relative;
+    width: 21.875rem; /* 12.5rem * 1.75 */
+    height: 27.34375rem; /* 15.625rem * 1.75 */
+    border-radius: 1.53125rem; /* 0.875rem * 1.75 */
+    z-index: 1111;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1rem 1rem 3rem #bebebe; /* 1.25rem * 1.75, 3.75rem * 1.75 */
+}
+
+/* Top-left and bottom-right colored areas */
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    width: 35%;  /* Adjust size of colored areas */
+    height: 35%;
+    background-color: #b8a14f; /* The original blob color */
+    z-index: 1;
+}
+
+/* Top-left corner */
+.card::before {
+    top: 0;
+    left: 0;
+    border-top-left-radius: 1.53125rem;
+}
+
+/* Bottom-right corner */
+.card::after {
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 1.53125rem;
+}
+
+.bg {
+    position: absolute;
+    top: 0.546875rem; /* 0.3125rem * 1.75 */
+    left: 0.546875rem; /* 0.3125rem * 1.75 */
+    width: 20.78125rem; /* 11.875rem * 1.75 */
+    height: 26.25rem; /* 15rem * 1.75 */
+    z-index: 2;
+    background: rgb(213, 213, 213);
+
+    backdrop-filter: blur(2.625rem); /* 1.5rem * 1.75 */
+    border-radius: 1.09375rem; /* 0.625rem * 1.75 */
+    overflow: hidden;
+    outline: 0.21875rem solid white; /* 0.125rem * 1.75 */
+}
+
+/*.bg::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-image: url("./LOGO-VLAD.png");*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    filter: blur(0.2rem); !* Adjust the blur strength *!*/
+/*    z-index: -1; !* Moves it behind other content *!*/
+/*}*/
+
+
+
+.card img {
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+}

@@ -1,0 +1,32 @@
+/* PrivacyPolicyModal.module.css */
+
+
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.modalContent {
+    background-color: var(--lightGray);
+    color: var(--charcoal)
+}
+
+.closeButton:hover {
+    color: red;
+}
+
+
+.closeButton {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+

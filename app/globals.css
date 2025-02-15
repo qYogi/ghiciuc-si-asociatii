@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --lightGray: #F5F5F5;
+  --lightGray: #eeeeee;
   --charcoal: #333333;
   --navyBlue: #0d1738;
   --lightCharcoal: #606060;
+  --mutedGold: #b8a14f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,5 +16,9 @@
     --foreground: #ededed;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 

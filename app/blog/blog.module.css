@@ -1,0 +1,54 @@
+/* app/blog/blog.module.css */
+.blogBody {
+    background-image: url("../../images/biblioteca2.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    padding: 3rem 0;
+    display: flex;
+    background-attachment: fixed;
+    justify-content: center;
+}
+
+.blogContainer {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #fafafa;
+    width: 80%;
+    box-shadow: 0 0 10px 5px rgba(13, 23, 56, 0.10);
+}
+
+.blogArticle {
+    border-left: 8px outset var(--navyBlue);
+    border-bottom: 8px outset var(--navyBlue);
+}
+
+.blogBodyCnt button {
+    background-color: var(--navyBlue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.blogBodyCnt button:hover {
+    box-shadow: 0 0 10px 5px rgba(13, 23, 56, 0.50);
+    background-color: #22408c;
+}
+
+/* Article text styles */
+.blogArticle h6 {
+    color: var(--lightCharcoal);
+}
+
+.blogArticle h1 {
+    color: var(--charcoal);
+}
+
+.blogArticle p {
+    color: var(--charcoal);
+}
+
+.blogArticle h1:hover {
+    color: var(--navyBlue);
+}

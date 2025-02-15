@@ -1,0 +1,95 @@
+/* app/home.module.css */
+.homeBody {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.homeOverHeader {
+    background-color: var(--charcoal);
+}
+
+.homeOverHeader h4 {
+    color: var(--lightGray);
+}
+
+
+
+.homeOverHeader .socialMedia svg {
+    color: var(--lightGray);
+    fill: var(--lightGray);
+}
+
+
+
+.homeBanner {
+    position: relative;
+    background-image: url("../images/columns.jpg");
+    background-size: cover;
+    height: 50rem;
+    background-position: bottom;
+}
+
+.homeBanner h4{
+    color: #eeeeee;
+    z-index: 9;
+}
+
+.homeBanner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(13, 23, 56, 0.80);
+}
+
+.homeBanner h2{
+    color: white;
+    z-index: 9;
+}
+.animatefadein {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.homeSubBanner {
+    background-color: var(--lightGray);
+}
+
+.homeServicii{
+    background-color: var(--navyBlue);
+}
+
+.homeServicii h1 {
+    color: var(--lightGray);
+}
+
+.homeEchipa h1{
+    color: var(--charcoal);
+}
+
+.homeSvc {
+    border: 0.10rem solid var(--mutedGold);
+    color: var(--navyBlue);
+    background-color: var(--lightGray);
+}
+
+.homeSvc .submenu {
+    transition: all 0.3s ease;
+}
+
+.homeMotto {
+    background-color: var(--lightGray);
+}
+
+
+
+
+
+

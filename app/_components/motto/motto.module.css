@@ -1,0 +1,35 @@
+.mottoContainer {
+    background-color: var(--lightGray);
+    color: var(--charcoal);
+}
+
+.imagePlaceholder {
+    height: 43rem;
+    background-image: url("../../../public/avocat-iasi.jpg");
+    background-size: cover;
+    /*background-position: top;*/
+}
+
+.textPlaceholder {
+    padding: 2rem;
+    height: 43rem;
+}
+
+@media (max-width: 640px) {
+    .mottoContainer {
+        background-color: var(--lightGray);
+        color: var(--charcoal);
+    }
+
+    .imagePlaceholder {
+        height: 18rem;
+        background-image: url("../../../public/avocat-iasi.jpg");
+        background-size: max(100%, 25rem);
+    }
+
+    .textPlaceholder {
+        padding: 2rem;
+        height: 24rem;
+    }
+
+}

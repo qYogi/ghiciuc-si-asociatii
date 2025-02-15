@@ -1,0 +1,41 @@
+.submenu {
+    background-color: var(--lightGray);
+    overflow: hidden; /* Add this */
+}
+
+.submenu .submenuLink {
+    display: block;
+    padding: 12px 24px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.submenu .submenuLink::before {
+    content: "";
+    position: absolute;
+    border-radius: 0.4rem;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    width: 100%;
+    height: 100%;
+    background-color: var(--navyBlue);
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.submenu .submenuLink:hover::before {
+    transform: scaleX(1);
+}
+
+@media (hover: none) {
+    .submenu .submenuLink:hover::before {
+        transform: scaleX(0);
+    }
+    .submenu .submenuLink:active::before {
+        transform: scaleX(1);
+    }
+}

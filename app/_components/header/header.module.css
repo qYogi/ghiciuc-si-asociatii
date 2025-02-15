@@ -1,0 +1,43 @@
+
+
+.homeHeader {
+    background-color: #eeeeee;
+}
+
+.homeHeader h1{
+    color: var(--navyBlue);
+}
+
+.homeHeader .links h3{
+    color: var(--navyBlue);
+    text-decoration: underline;
+}
+
+.homeHeader p{
+    color: var(--navyBlue);
+}
+
+.homeLogo {
+    height: 6rem;
+    width: 6rem;
+}
+
+.burgerLine {
+    @apply absolute block h-[3px] w-full bg-black rounded-lg transition-all duration-300;
+}
+
+.burgerLine:nth-of-type(1) {
+    @apply top-0;
+}
+
+.burgerLine:nth-of-type(2) {
+    @apply top-1/2 -translate-y-1/2;
+}
+
+.burgerLine:nth-of-type(3) {
+    @apply bottom-0;
+}
+
+.transition-menu {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}

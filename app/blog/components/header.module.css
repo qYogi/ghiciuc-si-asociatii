@@ -1,0 +1,9 @@
+/* components/Header.module.css */
+.header h1,
+.header p {
+    color: var(--navyBlue);
+}
+
+.divider {
+    border-color: var(--navyBlue);
+}
