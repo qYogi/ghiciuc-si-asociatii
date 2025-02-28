@@ -12,14 +12,14 @@ export const Whatsapp = () => {
         href={whatsappLink}
         target="_blank"
         rel="noreferrer noopener"
-        className="fixed bottom-4 right-4 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25d366]"
+        className="fixed bottom-10 right-10 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25d366]"
       >
         <div className="absolute z-25 top-0 left-0 w-full h-full rounded-full bg-[#25d366] animate-ping"></div>
         <div className="relative z-25">
           <svg
             fill="#fff"
-            height="24px"
-            width="24px"
+            height="23px"
+            width="23px"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             // xmlns="http://www.w3.org/1999/xlink"
