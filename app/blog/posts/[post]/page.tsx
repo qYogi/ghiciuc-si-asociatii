@@ -48,3 +48,9 @@ export default async function Post({ params }: Props) {
     </div>
   );
 }
+
+export const metadata = {
+  title: "Avocat Iași | Ghiciuc și Asociații",
+  description:
+    "Cabinet de avocatură în Iași. Vlad Ghiciuc și echipa oferă consultanță juridică specializată în drept penal, civil și comercial.",
+};

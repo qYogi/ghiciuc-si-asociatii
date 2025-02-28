@@ -3,17 +3,17 @@ import styles from "./echipa.module.css";
 
 const echipa = [
   {
-    img: "1vlad.png",
+    img: "1-avocat-vlad.png",
     name: "Vlad-Dimitrie Ghiciuc",
     role: "Avocat-Coordonator",
   },
   {
-    img: "2anca.png",
+    img: "2-avocat-anca.png",
     name: "Anca-Leticia Tiron",
     role: "Avocat-Definitiv",
   },
   {
-    img: "3laurentiu.png",
+    img: "3-avocat-laurentiu.png",
     name: "Laurențiu Cărămidă",
     role: "Avocat-Definitiv",
   },
@@ -28,7 +28,7 @@ export default function Gallery() {
             <div className={`${styles.bg}`}>
               <Image
                 src={`/echipa/${member.img}`}
-                alt={member.name}
+                alt={`Avocat - ${member.name} - Iasi`}
                 width={200}
                 height={200}
                 unoptimized

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ghiciuc&Asociații",
+  title: "Ghiciuc si Asociații | Cabinet Avocat Iași",
   description: "Societate civilă profesională de avocați",
 };
 
@@ -27,6 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Avocat Iasi. Birou Avocatura Iasi." />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body

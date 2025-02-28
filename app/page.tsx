@@ -15,8 +15,7 @@ import { Header } from "@/app/_components/header/header";
 export default async function Home() {
   const whatsappNumber = "+40755189133";
   const baseUrl = "https://api.whatsapp.com/send";
-  const encodedMessage = "Cum vă putem ajuta?";
-  const whatsappLink = `${baseUrl}?phone=${whatsappNumber}&text=${encodedMessage}&type=phone_number&app_absent=0`;
+  const whatsappLink = `${baseUrl}?phone=${whatsappNumber}&type=phone_number&app_absent=0`;
 
   return (
     <div className={styles.homeBody}>
@@ -62,13 +61,15 @@ export default async function Home() {
               transform origin-top"
           >
             <h4 className="text-center">
-              Consilium reflectă strategia noastră atent construită, bazată pe o
-              înțelegere profundă a fiecărei situații legale, pentru a oferi
-              soluții clare și fundamentate.{" "}
+              <span className={`italic`}>Consilium</span> reflectă strategia
+              noastră atent construită, bazată pe o înțelegere profundă a
+              fiecărei situații legale, pentru a oferi soluții clare și
+              fundamentate.{" "}
             </h4>
             <h4 className="text-center">
-              Actio este pasiunea și dedicarea cu care punem în practică aceste
-              strategii, asigurându-ne că fiecare pas este calculat și eficient.{" "}
+              <span className={`italic`}>Actio</span> este pasiunea și dedicarea
+              cu care punem în practică aceste strategii, asigurându-ne că
+              fiecare pas este calculat și eficient.{" "}
             </h4>
           </div>
         </div>
@@ -95,3 +96,9 @@ export default async function Home() {
     </div>
   );
 }
+
+export const metadata = {
+  title: "Avocat Iași | Ghiciuc și Asociații",
+  description:
+    "Cabinet de avocatură în Iași. Vlad Ghiciuc și echipa oferă consultanță juridică specializată în drept penal, civil și comercial.",
+};

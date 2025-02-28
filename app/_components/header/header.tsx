@@ -18,7 +18,7 @@ export const Header = () => {
             Ghiciuc & Asociații
           </h1>
           <p className="font-serif text-lg flex justify-center">
-            -Societate Civilă Profesională De Avocați-
+            -Societate Civilă Profesională de Avocați-
           </p>
         </div>
       </div>
