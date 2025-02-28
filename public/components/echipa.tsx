@@ -5,17 +5,17 @@ const echipa = [
   {
     img: "1vlad.png",
     name: "Vlad-Dimitrie Ghiciuc",
-    role: "Avocat Coordonator",
+    role: "Avocat-Coordonator",
   },
   {
     img: "2anca.png",
     name: "Anca-Leticia Tiron",
-    role: "Avocat Definitiv",
+    role: "Avocat-Definitiv",
   },
   {
     img: "3laurentiu.png",
     name: "Laurențiu Cărămidă",
-    role: "Avocat Definitiv",
+    role: "Avocat-Definitiv",
   },
 ];
 
