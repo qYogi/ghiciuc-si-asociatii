@@ -15,7 +15,8 @@ import { Header } from "@/app/_components/header/header";
 export default async function Home() {
   const whatsappNumber = "+40755189133";
   const baseUrl = "https://api.whatsapp.com/send";
-  const whatsappLink = `${baseUrl}?phone=${whatsappNumber}&type=phone_number&app_absent=0`;
+  const encodedMessage = "Am nevoie de consultanță juridică.";
+  const whatsappLink = `${baseUrl}?phone=${whatsappNumber}&text=${encodedMessage}&type=phone_number&app_absent=0`;
 
   return (
     <div className={styles.homeBody}>

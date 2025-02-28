@@ -33,7 +33,7 @@ export const Footer = () => {
 
         <div className={`${styles.verticalDivider} hidden md:flex`}></div>
         <div className={`${styles.footerInfo} px-4`}>
-          <h1>Jud. Iași, Mun. Iași, Str. Gicha Vodă, Nr. 3A</h1>
+          <h1>Jud. Iași, Mun. Iași, Str. Gica Vodă, Nr. 3A mezanin</h1>
           <h1>Tel: +40 755 189 133</h1>
           <h1>Email: office@ghiciucsiasociatii.ro</h1>
           <div className={`${styles.footerANPC}`}>
