@@ -6,7 +6,7 @@ export const Motto = () => {
       className={`${styles.mottoContainer} grid grid-rows-2 grid-cols-1 md:flex md:flex-row md:justify-between`}
     >
       <div
-        className={`${styles.textPlaceholder} w-full md:w-1/2 p-2.5 md:p-16 content-center`}
+        className={`${styles.textPlaceholder} w-full md:w-1/2 p-3 md:p-16 content-center`}
       >
         <div className=" text-sm md:text-2xl leading-loose font-serif font-light text-secondary text-justify italic">
           <p className="indent-8">
