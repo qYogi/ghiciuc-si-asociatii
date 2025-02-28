@@ -3,12 +3,12 @@ import styles from "./motto.module.css";
 export const Motto = () => {
   return (
     <div
-      className={`${styles.mottoContainer} flex flex-col md:flex-row md:justify-between`}
+      className={`${styles.mottoContainer} grid grid-rows-2 grid-cols-1 md:flex md:flex-row md:justify-between`}
     >
       <div
-        className={`${styles.textPlaceholder} w-full md:w-1/2 p-16 content-center`}
+        className={`${styles.textPlaceholder} w-full md:w-1/2 p-2.5 md:p-16 content-center`}
       >
-        <h1 className=" text-sm md:text-2xl leading-loose font-serif font-light text-gray-800 text-justify italic">
+        <div className=" text-sm md:text-2xl leading-loose font-serif font-light text-secondary text-justify italic">
           <p className="indent-8">
             „Într-o lume în continuă schimbare,
             <span className=" font-medium"> Ghiciuc și Asociații </span>
@@ -27,7 +27,7 @@ export const Motto = () => {
             putem contribui la rezolvarea celor mai complexe provocări juridice,
             cu un angajament total față de succesul dumneavoastră.”
           </p>
-        </h1>
+        </div>
       </div>
       <div className={`${styles.imagePlaceholder} w-full  md:w-1/2`}></div>
     </div>
