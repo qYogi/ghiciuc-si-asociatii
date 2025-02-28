@@ -4,9 +4,20 @@ import Link from "next/link";
 import { Header } from "@/app/blog/_components/header";
 import { BlogContactForm } from "@/app/blog/_components/blogContactForm";
 
-export default async function Blog() {
-  const posts = await getPosts();
-
+export default async function Blog({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  // Await the promise to get the actual search parameters
+  const { page } = await searchParams;
+  const currentPage = Number(page || 1);
+  const pageSize = 15;
+  const { posts, total } = await getPosts({
+    page: currentPage,
+    pageSize,
+  });
+  const totalPages = Math.ceil(total / pageSize);
   return (
     <div className={styles.blogBody}>
       <div
@@ -48,6 +59,25 @@ export default async function Blog() {
                 </div>
               </article>
             ))}
+
+            <div className="flex justify-center gap-2 mt-8">
+              {Array.from({ length: totalPages }, (_, i) => {
+                const pageNumber = i + 1;
+                return (
+                  <Link
+                    key={pageNumber}
+                    href={`/blog?page=${pageNumber}`}
+                    className={`px-4 py-2 rounded ${
+                      currentPage === pageNumber
+                        ? "bg-blue-600 text-white"
+                        : "bg-gray-200 hover:bg-gray-300"
+                    }`}
+                  >
+                    {pageNumber}
+                  </Link>
+                );
+              })}
+            </div>
           </div>
 
           {/* Contact Form Section */}
