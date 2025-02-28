@@ -13,7 +13,7 @@ export const ContactForm = () => {
       return;
     }
 
-    // 👇 A nice little track to get all the form values as an object
+    // Capture form values
     const form = e.target as HTMLFormElement;
     const formValues = Object.fromEntries(new FormData(form).entries());
 
@@ -21,16 +21,16 @@ export const ContactForm = () => {
     setSuccessMessage("");
 
     try {
-      await fetch("/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-type": "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formValues),
-      }).then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
       });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
       setLoading(false);
       setSuccessMessage(
         "Mulțumim că ne-ați contactat!\nVă vom răspunde în cel mai scurt timp.",
@@ -38,7 +38,7 @@ export const ContactForm = () => {
 
       form.reset();
     } catch (err) {
-      console.error(err);
+      console.error("Failed to send message:", err);
       setLoading(false);
       setSuccessMessage("A apărut o eroare. Vă rugăm încercați din nou.");
     }
@@ -46,28 +46,16 @@ export const ContactForm = () => {
 
   return (
     <div className={`${styles.footerForm} w-full px-4`}>
-      <h1 className={`text-3xl font-semibold mb-4`}> Contactează-ne </h1>
-      <form onSubmit={onSubmit} className={`flex flex-col `}>
-        <input
-          type="text"
-          placeholder="Nume  "
-          id="name"
-          name="name"
-          required={true}
-        />
-        <input
-          type="tel"
-          placeholder="Telefon"
-          id="tel"
-          name="tel"
-          required={true}
-        />
+      <h1 className="text-3xl font-semibold mb-4"> Contactează-ne </h1>
+      <form onSubmit={onSubmit} className="flex flex-col">
+        <input type="text" placeholder="Nume" id="name" name="name" required />
+        <input type="tel" placeholder="Telefon" id="tel" name="tel" required />
         <input
           type="email"
           placeholder="Email"
           id="email"
           name="email"
-          required={true}
+          required
         />
         <input
           type="text"
@@ -80,7 +68,7 @@ export const ContactForm = () => {
           placeholder="Mesaj"
           name="message"
           rows={5}
-          required={true}
+          required
         />
         <Form.Check
           id="privacy-check"
