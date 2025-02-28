@@ -1,0 +1,39 @@
+.footerForm input {
+    border: 0.13rem solid var(--mutedGold);
+    border-radius: 0.2rem;
+    color: var(--charcoal);
+    outline: none;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem ;
+}
+
+.footerForm input:focus {
+    box-shadow: 0px 0px 10px 5px rgb(184, 161, 79, 0.5);
+}
+
+.footerForm textarea {
+    border: 0.13rem solid var(--mutedGold);
+    border-radius: 0.2rem;
+    resize: none;
+    color: var(--charcoal);
+    outline: none;
+    padding-left: 1rem;
+}
+
+.footerForm textarea:focus {
+    box-shadow: 0px 0px 10px 5px rgb(184, 161, 79, 0.5);
+
+}
+
+.footerForm button {
+    background-color: var(--mutedGold);
+    color: var(--charcoal);
+    border: 0.13rem solid var(--mutedGold);
+    border-radius: 0.2rem;
+}
+
+.footerForm button:hover {
+    background-color: var(--charcoal);
+    color: var(--mutedGold);
+    box-shadow: 0px 0px 10px 5px rgb(184, 161, 79, 0.5);
+}

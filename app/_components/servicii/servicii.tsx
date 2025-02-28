@@ -12,7 +12,7 @@ import {
   DreptulMunciiIcon,
   DreptulProprietatiiIntelectualeIcon,
 } from "@/app/_components/servicii/svgs/componente/serviciiSvgs";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const servicii = [
   {
@@ -130,10 +130,25 @@ const servicii = [
 
 export const Servicii = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const serviceRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const toggleService = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
+  useEffect(() => {
+    if (activeIndex === null) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      const activeRef = serviceRefs.current[activeIndex];
+      if (activeRef && !activeRef.contains(event.target as Node)) {
+        setActiveIndex(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [activeIndex]);
 
   return (
     <div
@@ -146,7 +161,10 @@ export const Servicii = () => {
         {servicii.map(({ name, icon, subservices }, index) => (
           <div
             key={index}
-            className={`${styles.homeSvc} group relative py-6 md:p-6  rounded-lg shadow-md transition-all`}
+            ref={(el) => {
+              serviceRefs.current[index] = el;
+            }}
+            className={`${styles.homeSvc} group relative py-6 md:p-6 rounded-lg shadow-md transition-all`}
           >
             <div className={`${style.item} z-[1]`}>
               <div

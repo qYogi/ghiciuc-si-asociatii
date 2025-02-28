@@ -2,16 +2,17 @@ import { getPost } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import styles from "./post.module.css"; // <-- Import CSS Module
 import { notFound } from "next/navigation";
-import { Header } from "@/app/blog/components/header";
+import { Header } from "@/app/blog/_components/header";
+
+type Params = Promise<{ post: string }>;
 
 type Props = {
-  params: {
-    post: string;
-  };
+  params: Params;
 };
 
 export default async function Post({ params }: Props) {
-  const slug = params.post;
+  // Await the promise to get the resolved params object
+  const { post: slug } = await params;
   const post = await getPost(slug);
 
   if (!post) {

@@ -1,35 +1,19 @@
-/* app/blog/posts/[post]/post.module.css */
 .postBody {
     background-image: url("../../../../images/biblioteca2.jpg");
     background-size: cover;
     min-height: 100vh;
-    padding: 3rem 0;
-    display: flex;
     background-attachment: fixed;
-    justify-content: center;
-}
-
-.postContainer {
     display: flex;
-    justify-content: flex-start;
-    background-color: #fafafa;
-    width: 80%;
-    box-shadow: 0 0 10px 5px rgba(13, 23, 56, 0.10);
-}
-
-.postContainer h1 {
-    color: var(--charcoal);
-}
-
-.dateAuth {
-    color: var(--lightCharcoal);
+    justify-content: center;
+    padding: 2rem 0;
 }
 
 .content {
     color: var(--charcoal);
 }
 
-/* If you need to style the hr */
-.postDivider {
-    border: 2px solid var(--navyBlue);
+@media (max-width: 768px) {
+    .postBody {
+        padding: 1rem 0;
+    }
 }

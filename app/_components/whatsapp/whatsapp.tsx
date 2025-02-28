@@ -1,4 +1,3 @@
-import styles from "./wapp.module.css";
 import Link from "next/link";
 
 export const Whatsapp = () => {

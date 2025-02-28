@@ -1,6 +1,5 @@
 import styles from "./home.module.css";
 import Link from "next/link";
-import Logo from "@/app/svgs/Logo";
 import {
   FacebookLogo,
   InstagramLogo,
@@ -32,13 +31,13 @@ export default async function Home() {
           <div
             className={`${styles.socialMedia} flex-row gap-4 flex self-center  md:pr-8`}
           >
-            <Link href="/">
+            <Link href="https://www.instagram.com/ghiciucsiasociatii/">
               <InstagramLogo />
             </Link>
-            <Link href="#">
+            <Link href="https://www.tiktok.com/@ghiciuc.asociatii">
               <TikTokLogo />
             </Link>
-            <Link href="#">
+            <Link href="https://www.facebook.com/profile.php?id=61572888712185&rdid=42IyXBEbLb1amF2h&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BSm52J6SD%2F#">
               <FacebookLogo />
             </Link>
             <Link href={whatsappLink}>
@@ -46,60 +45,30 @@ export default async function Home() {
             </Link>
           </div>
         </div>
-
         <Header />
-        {/*<header*/}
-        {/*  className={`${styles.homeHeader} navbar flex flex-row justify-between w-full h-28 font-serif`}*/}
-        {/*>*/}
-        {/*  <div className="logo flex items-center h-full gap-4 self-center pl-4">*/}
-        {/*    <Logo size={170} className={`${styles.homeLogo} `} />*/}
-        {/*    <div>*/}
-        {/*      <h1 className="font-serif text-4xl font-semibold">*/}
-        {/*        Ghiciuc & Asociații*/}
-        {/*      </h1>*/}
-        {/*      <p className="font-serif text-lg flex justify-center">*/}
-        {/*        -Societate civilă profesională de avocați-*/}
-        {/*      </p>*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-
-        {/*  <nav*/}
-        {/*    className={`${styles.links} flex flex-row self-center gap-8 pr-14`}*/}
-        {/*  >*/}
-        {/*    <Link href="/">*/}
-        {/*      <h3 className="text-2xl">Servicii</h3>*/}
-        {/*    </Link>*/}
-        {/*    <Link href="/blog">*/}
-        {/*      <h3 className="text-2xl">Blog</h3>*/}
-        {/*    </Link>*/}
-        {/*    <Link href="/">*/}
-        {/*      <h3 className="text-2xl underline">Echipa</h3>*/}
-        {/*    </Link>*/}
-        {/*    <Link href="/">*/}
-        {/*      <h3 className="text-2xl">Abonamente</h3>*/}
-        {/*    </Link>*/}
-        {/*    <Link href="/">*/}
-        {/*      <h3 className="text-2xl">Contact</h3>*/}
-        {/*    </Link>*/}
-        {/*  </nav>*/}
-        {/*</header>*/}
 
         <div
-          className={`${styles.homeBanner} gap-4 flex flex-col justify-center items-center relative`}
+          className={`${styles.homeBanner} group gap-4 flex flex-col justify-center items-center relative`}
         >
           <h2
-            className={`text-4xl md:text-8xl font-serif font-semibold italic text-lightGray tracking-wide z-10 ${styles.animatefadein}`}
+            className={`text-4xl md:text-8xl font-serif font-semibold italic text-lightGray tracking-wide z-10 ${styles.animatefadein} transition-transform duration-300 hover:scale-105\``}
           >
             Consilium et Actio
           </h2>
-          <div className="flex text-lg flex-col justify-center gap-2">
+          <div
+            className="opacity-0 group-hover:opacity-100
+              transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
+              flex flex-col justify-center gap-2
+              transform origin-top"
+          >
             <h4 className="text-center">
-              Prin „consilium”, societatea noastră vă oferă consiliere
-              strategică și bine documentată.{" "}
+              Consilium reflectă strategia noastră atent construită, bazată pe o
+              înțelegere profundă a fiecărei situații legale, pentru a oferi
+              soluții clare și fundamentate.{" "}
             </h4>
             <h4 className="text-center">
-              Însă, mai presus de atât, „actio” simbolizează abordarea activă,
-              orientată spre acțiune și rezultate.
+              Actio este pasiunea și dedicarea cu care punem în practică aceste
+              strategii, asigurându-ne că fiecare pas este calculat și eficient.{" "}
             </h4>
           </div>
         </div>

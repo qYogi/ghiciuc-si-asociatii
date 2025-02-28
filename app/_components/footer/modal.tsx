@@ -24,7 +24,7 @@ const sections = [
     content2: ["Folosim aceste date pentru:"],
     list2: [
       "A răspunde la întrebări sau solicitări.",
-      "A vă oferi servicii juridice.",
+      "A vă oferi abonamente juridice.",
     ],
     content3: ["Nu folosim datele pentru:"],
     list3: [
@@ -37,7 +37,7 @@ const sections = [
     content: [
       "Prelucrăm datele pe baza:",
       "Consimțământului dumneavoastră – atunci când trimiteți formularul.",
-      "Necesității încheierii unui contract – dacă solicitați servicii juridice.",
+      "Necesității încheierii unui contract – dacă solicitați abonamente juridice.",
     ],
   },
   {
