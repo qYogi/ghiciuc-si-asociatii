@@ -3,7 +3,7 @@ import Link from "next/link";
 export const Whatsapp = () => {
   const whatsappNumber = "+40755189133";
   const baseUrl = "https://api.whatsapp.com/send";
-  const encodedMessage = "Cum vă putem ajuta?";
+  const encodedMessage = "Am nevoie de consultanță juridică.";
   const whatsappLink = `${baseUrl}?phone=${whatsappNumber}&text=${encodedMessage}&type=phone_number&app_absent=0`;
 
   return (
