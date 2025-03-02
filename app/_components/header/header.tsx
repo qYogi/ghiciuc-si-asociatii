@@ -26,19 +26,19 @@ export const Header = () => {
       <nav
         className={`${styles.links} hidden md:flex flex-row self-center gap-8 pr-14`}
       >
-        <Link href={"/"}>
+        <Link href={"/"} target="_blank">
           <h3 className="text-2xl font-[700]">Home</h3>
         </Link>
-        <Link href="/abonamente">
+        <Link href="/abonamente" target="_blank">
           <h3 className="text-2xl font-[700]">Abonamente</h3>
         </Link>
-        <Link href="/blog">
+        <Link href="/blog" target="_blank">
           <h3 className="text-2xl font-[700]">Blog</h3>
         </Link>
         {/*<Link href="/echipa">*/}
         {/*  <h3 className="text-2xl font-[700]">Echipa</h3>*/}
         {/*</Link>*/}
-        <Link href="/contact">
+        <Link href="/contact" target="_blank">
           <h3 className="text-2xl font-[700]">Contact</h3>
         </Link>
       </nav>
@@ -65,19 +65,19 @@ export const Header = () => {
       {isOpen && (
         <div className="absolute md:hidden top-28 right-0 w-full bg-white shadow-lg z-50">
           <nav className="flex flex-col items-center gap-6 py-8">
-            <Link href={"/"}>
+            <Link href={"/"} target="_blank">
               <h3 className="text-2xl font-[700]">Home</h3>
             </Link>
-            <Link href="/abonamente">
+            <Link href="/abonamente" target="_blank">
               <h3 className="text-2xl font-[700]">Abonamente</h3>
             </Link>
-            <Link href="/blog">
+            <Link href="/blog" target="_blank">
               <h3 className="text-2xl font-[700]">Blog</h3>
             </Link>
             {/*<Link href="/echipa">*/}
             {/*  <h3 className="text-2xl font-[700]">Echipa</h3>*/}
             {/*</Link>*/}
-            <Link href="/contact">
+            <Link href="/contact" target="_blank">
               <h3 className="text-2xl font-[700]">Contact</h3>
             </Link>
           </nav>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PhoneIcon } from "@/app/_components/whatsapp/PhoneIcon";
 
 export const Whatsapp = () => {
   const whatsappNumber = "+40755189133";
@@ -8,6 +9,9 @@ export const Whatsapp = () => {
 
   return (
     <div>
+      <Link href="tel:0755189133" className={`md:hidden`}>
+        <PhoneIcon color={`#b8a14f`} />
+      </Link>
       <Link
         href={whatsappLink}
         target="_blank"
