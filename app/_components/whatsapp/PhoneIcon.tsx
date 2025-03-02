@@ -11,7 +11,7 @@ export const PhoneIcon: React.FC<PhoneIconProps> = ({
 }) => {
   return (
     <div
-      className={`fixed left-4 bg-primary p-2.5 rounded-full bottom-4 z-25 ${className}`}
+      className={`fixed bottom-4 left-4 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary ${className}`}
     >
       <svg
         width="36px"
