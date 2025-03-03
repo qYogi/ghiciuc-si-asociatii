@@ -54,8 +54,9 @@ export default async function Home() {
           <Image
             src="/column.webp"
             alt="Avocat Iasi | Ghiciuc si Asociatii"
-            fill={true}
             rel="preload"
+            priority
+            fill={true}
           />
           <h2
             rel="preload"
@@ -81,7 +82,7 @@ export default async function Home() {
             </h4>
           </div>
         </div>
-        <div className={`${styles.homeMotto} w-full`}>
+        <div className={`${styles.homeMotto} w-full `}>
           <Motto />
         </div>
         <div

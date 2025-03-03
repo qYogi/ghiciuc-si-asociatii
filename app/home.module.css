@@ -26,9 +26,11 @@
     position: relative;
     /*background-image: url("../public/column.webp");*/
     /*background-size: cover;*/
-    height: 50rem;
+    height: 40rem;
     /*background-position: bottom;*/
 }
+
+
 
 .homeBanner h4{
     color: #eeeeee;
@@ -87,6 +89,8 @@
 
 .homeMotto {
     background-color: var(--lightGray);
+    position: relative;
+    min-height: 500px;
 }
 
 
