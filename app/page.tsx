@@ -55,6 +55,7 @@ export default async function Home() {
             src="/column.webp"
             alt="Avocat Iasi | Ghiciuc si Asociatii"
             fill={true}
+            rel="preload"
           />
           <h2
             rel="preload"

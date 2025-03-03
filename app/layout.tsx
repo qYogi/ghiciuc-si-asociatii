@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ghiciuc si Asociații | Cabinet Avocat Iași",
-  description: "Societate civilă profesională de avocați",
+  description:
+    "Cabinet de avocatură în Iași. Vlad Ghiciuc și echipa oferă consultanță juridică specializată în drept penal, civil și comercial.",
 };
 
 export default function RootLayout({
