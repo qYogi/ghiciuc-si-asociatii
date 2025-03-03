@@ -6,16 +6,19 @@ const echipa = [
     img: "1-avocat-vlad.webp",
     name: "Vlad-Dimitrie Ghiciuc",
     role: "Avocat-Coordonator",
+    alt: "Avocat Iasi - Vlad-Dimitrie Ghiciuc",
   },
   {
     img: "2-avocat-anca.webp",
     name: "Anca-Leticia Tiron",
     role: "Avocat-Definitiv",
+    alt: "Avocat Iasi - Anca-Leticia Tiron",
   },
   {
     img: "3-avocat-laurentiu.webp",
     name: "Laurențiu Cărămidă",
     role: "Avocat-Definitiv",
+    alt: "Avocat Iasi - Laurențiu Cărămidă",
   },
 ];
 
@@ -28,7 +31,7 @@ export default function Gallery() {
             <div className={`${styles.bg}`}>
               <Image
                 src={`/echipa/${member.img}`}
-                alt={`Avocat - ${member.name} - Iasi`}
+                alt={member.alt}
                 width={200}
                 height={200}
                 unoptimized
