@@ -5,7 +5,7 @@
 
 .imagePlaceholder {
     height: 43rem;
-    background-image: url("../../../public/avocat-iasi.jpg");
+    background-image: url("../../../public/avocat-iasi.webp");
     background-size: cover;
     /*background-position: top;*/
 }
@@ -22,7 +22,7 @@
 
     .imagePlaceholder {
         height: 18rem;
-        background-image: url("../../../public/avocat-iasi.jpg");
+        background-image: url("../../../public/avocat-iasi.webp");
         background-size: max(100%, 25rem);
     }
 

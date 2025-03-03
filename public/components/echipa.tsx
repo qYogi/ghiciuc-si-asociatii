@@ -3,17 +3,17 @@ import styles from "./echipa.module.css";
 
 const echipa = [
   {
-    img: "1-avocat-vlad.png",
+    img: "1-avocat-vlad.webp",
     name: "Vlad-Dimitrie Ghiciuc",
     role: "Avocat-Coordonator",
   },
   {
-    img: "2-avocat-anca.png",
+    img: "2-avocat-anca.webp",
     name: "Anca-Leticia Tiron",
     role: "Avocat-Definitiv",
   },
   {
-    img: "3-avocat-laurentiu.png",
+    img: "3-avocat-laurentiu.webp",
     name: "Laurențiu Cărămidă",
     role: "Avocat-Definitiv",
   },
