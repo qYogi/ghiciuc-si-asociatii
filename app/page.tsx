@@ -11,6 +11,7 @@ import { Footer } from "@/app/_components/footer/footer";
 import { Servicii } from "@/app/_components/servicii/servicii";
 import { Motto } from "@/app/_components/motto/motto";
 import { Header } from "@/app/_components/header/header";
+import Image from "next/image";
 
 export default async function Home() {
   const whatsappNumber = "+40755189133";
@@ -50,6 +51,11 @@ export default async function Home() {
         <div
           className={`${styles.homeBanner} group gap-4 flex flex-col justify-center items-center relative`}
         >
+          <Image
+            src="/column.webp"
+            alt="Avocat Iasi | Ghiciuc si Asociatii"
+            fill={true}
+          />
           <h2
             rel="preload"
             className={`text-4xl md:text-8xl font-serif font-semibold italic text-lightGray tracking-wide z-10`}
@@ -60,7 +66,7 @@ export default async function Home() {
             className="opacity-0 group-hover:opacity-100
               transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
               flex flex-col justify-center gap-2
-              transform origin-top"
+              transform origin-top z-[3]"
           >
             <h4 className="text-center">
               <span className={`italic`}>Consilium</span> reflectă strategia
