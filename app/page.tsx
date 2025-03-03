@@ -51,7 +51,8 @@ export default async function Home() {
           className={`${styles.homeBanner} group gap-4 flex flex-col justify-center items-center relative`}
         >
           <h2
-            className={`text-4xl md:text-8xl font-serif font-semibold italic text-lightGray tracking-wide z-10 ${styles.animatefadein} transition-transform duration-300 hover:scale-105\``}
+            rel="preload"
+            className={`text-4xl md:text-8xl font-serif font-semibold italic text-lightGray tracking-wide z-10`}
           >
             Consilium et Actio
           </h2>

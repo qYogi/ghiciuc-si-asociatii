@@ -24,7 +24,7 @@
 
 .homeBanner {
     position: relative;
-    background-image: url("../images/columns.jpg");
+    background-image: url("../public/column.webp");
     background-size: cover;
     height: 50rem;
     background-position: bottom;
