@@ -43,7 +43,7 @@
     width: 100%;
     height: 100%;
     background-color: rgb(13, 23, 56, 0.80);
-    z-index: 2;
+    z-index: 4;
 }
 
 .homeBanner h2{

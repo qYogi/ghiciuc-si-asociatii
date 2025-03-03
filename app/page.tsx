@@ -67,7 +67,7 @@ export default async function Home() {
             className="opacity-0 group-hover:opacity-100
               transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
               flex flex-col justify-center gap-2
-              transform origin-top z-[3]"
+              transform origin-top z-[6]"
           >
             <h4 className="text-center">
               <span className={`italic`}>Consilium</span> reflectă strategia
