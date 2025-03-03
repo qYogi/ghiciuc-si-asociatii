@@ -26,7 +26,7 @@ export default async function Home() {
           className={`${styles.homeOverHeader} h-12 w-full flex md:flex-row justify-evenly md:justify-between`}
         >
           <div className="font-sans contact md:flex flex-col  hidden justify-between md:gap-5 md:flex-row md:self-center pl-8 font-semibold">
-            <h4>Tel: +40 747 402 252</h4>
+            <h4>Tel: +40755189133</h4>
             <h4>Email: office@ghiciucsiasociatii.ro</h4>
           </div>
           <div
