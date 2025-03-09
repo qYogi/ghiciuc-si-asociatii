@@ -10,13 +10,13 @@ export const Whatsapp = () => {
   return (
     <div>
       <Link href="tel:0755189133" className={`md:hidden`}>
-        <PhoneIcon className={`left-4`} color={`#b8a14f`} />
+        <PhoneIcon className={`right-4`} color={`#b8a14f`} />
       </Link>
       <Link
         href={whatsappLink}
         target="_blank"
         rel="noreferrer noopener"
-        className="fixed bottom-4 right-4 md:left-4 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25d366]"
+        className="fixed bottom-4 md:left-4 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25d366]"
       >
         <div className="absolute z-25 top-0 left-0 w-full h-full rounded-full bg-[#25d366] animate-ping"></div>
         <div className="relative z-25">
