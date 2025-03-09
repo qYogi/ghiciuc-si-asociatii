@@ -10,7 +10,7 @@ export const Whatsapp = () => {
   return (
     <div>
       <Link href="tel:0755189133" className={`md:hidden`}>
-        <PhoneIcon color={`#b8a14f`} />
+        <PhoneIcon className={`left-4`} color={`#b8a14f`} />
       </Link>
       <Link
         href={whatsappLink}
