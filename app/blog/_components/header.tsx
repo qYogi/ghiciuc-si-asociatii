@@ -18,7 +18,7 @@ export const Header = () => {
         <div className="flex flex-col md:flex-row items-center gap-1 md:gap-4">
           <Logo className="w-12 md:w-24 h-auto" />
           <div className="text-center md:text-left">
-            <h1 className="font-serif text-2xl md:text-4xl font-semibold leading-tight">
+            <h1 className="font-serif text-primary text-2xl md:text-4xl font-semibold leading-tight">
               Ghiciuc & Asociații
             </h1>
             <p className="font-serif text-sm md:text-lg mt-1 md:mt-2">

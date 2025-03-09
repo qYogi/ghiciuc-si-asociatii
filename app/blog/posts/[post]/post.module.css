@@ -5,15 +5,15 @@
     background-attachment: fixed;
     display: flex;
     justify-content: center;
-    padding: 2rem 0;
+
 }
 
-.content {
-    color: var(--charcoal);
-}
+/*.content {*/
+/*    color: var(--charcoal);*/
+/*}*/
 
-@media (max-width: 768px) {
-    .postBody {
-        padding: 1rem 0;
-    }
-}
+/*@media (max-width: 768px) {*/
+/*    .postBody {*/
+/*        padding: 1rem 0;*/
+/*    }*/
+/*}*/
