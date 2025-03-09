@@ -24,7 +24,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const underMaintenance = true;
+  const underMaintenance = false;
 
   return (
     //use the underMentenance variable to conditionally render the maintenance page
@@ -40,7 +40,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {underMaintenance ? (
-          <div className="fixed inset-0 bg-gray-50 z-50 flex items-center justify-center min-h-screen px-4">
+          <div className="w-full fixed inset-0 bg-gray-50 z-50 flex items-center justify-center min-h-screen px-4">
             <div className="text-center max-w-2xl">
               <div className="animate-pulse mb-8">
                 <span className="text-6xl">🛠️</span>
