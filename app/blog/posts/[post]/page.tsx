@@ -1,9 +1,18 @@
 import { getPost } from "@/sanity/sanity-utils";
-import { PortableText } from "@portabletext/react";
-import styles from "./post.module.css"; // <-- Import CSS Module
+import {
+  PortableText,
+  PortableTextComponents,
+  PortableTextComponentProps,
+  PortableTextMarkComponentProps,
+} from "@portabletext/react";
+import { TypedObject, PortableTextBlock } from "@portabletext/types";
+
+import styles from "./post.module.css";
 import { notFound } from "next/navigation";
 import { Header } from "@/app/blog/_components/header";
 import { Footer } from "@/app/_components/footer/footer";
+import Image from "next/image";
+import React from "react";
 
 type Params = Promise<{ post: string }>;
 
@@ -11,20 +20,23 @@ type Props = {
   params: Params;
 };
 
-export default async function Post({ params }: Props) {
-  // Await the promise to get the resolved params object
-  const { post: slug } = await params;
-  const post = await getPost(slug);
+interface ImageValue {
+  asset: { url: string };
+  caption?: string;
+}
 
-  if (!post) {
-    notFound();
-  }
+interface LinkValue extends TypedObject {
+  _type: string;
+  href: string;
+}
 
-  const portableTextComponents = {
-    types: {
-      image: ({ value }: any) => (
+const portableTextComponents: PortableTextComponents = {
+  types: {
+    image: (props: { value: ImageValue }) => {
+      const { value } = props;
+      return (
         <div className="my-8">
-          <img
+          <Image
             src={value.asset.url}
             alt={value.caption || " "}
             className="w-full h-auto rounded-lg shadow-lg"
@@ -35,45 +47,66 @@ export default async function Post({ params }: Props) {
             </p>
           )}
         </div>
-      ),
+      );
     },
-    block: {
-      normal: ({ children }: any) => (
-        <p className="mb-6 leading-relaxed">{children}</p>
-      ),
-      h1: ({ children }: any) => (
-        <h2 className="text-4xl font-bold mb-6 mt-12">{children}</h2>
-      ),
-      h2: ({ children }: any) => (
-        <h3 className="text-3xl font-bold mb-5 mt-10">{children}</h3>
-      ),
-      h3: ({ children }: any) => (
-        <h4 className="text-2xl font-semibold mb-4 mt-8">{children}</h4>
-      ),
-      h4: ({ children }: any) => (
-        <h5 className="text-xl font-semibold mb-3 mt-6">{children}</h5>
-      ),
-      blockquote: ({ children }: any) => (
+  },
+  block: {
+    normal: (props: PortableTextComponentProps<PortableTextBlock>) => {
+      const { children } = props;
+      return <p className="mb-6 leading-relaxed">{children}</p>;
+    },
+    h1: (props: PortableTextComponentProps<PortableTextBlock>) => {
+      const { children } = props;
+      return <h2 className="text-4xl font-bold mb-6 mt-12">{children}</h2>;
+    },
+    h2: (props: PortableTextComponentProps<PortableTextBlock>) => {
+      const { children } = props;
+      return <h3 className="text-3xl font-bold mb-5 mt-10">{children}</h3>;
+    },
+    h3: (props: PortableTextComponentProps<PortableTextBlock>) => {
+      const { children } = props;
+      return <h4 className="text-2xl font-semibold mb-4 mt-8">{children}</h4>;
+    },
+    h4: (props: PortableTextComponentProps<PortableTextBlock>) => {
+      const { children } = props;
+      return <h5 className="text-xl font-semibold mb-3 mt-6">{children}</h5>;
+    },
+    blockquote: (props: PortableTextComponentProps<PortableTextBlock>) => {
+      const { children } = props;
+      return (
         <blockquote className="border-l-4 border-primary pl-4 my-6 text-gray-600 italic">
           {children}
         </blockquote>
-      ),
+      );
     },
-    list: {
-      bullet: ({ children }: any) => (
-        <ul className="list-disc pl-8 mb-6 space-y-2">{children}</ul>
-      ),
-      number: ({ children }: any) => (
-        <ol className="list-decimal pl-8 mb-6 space-y-2">{children}</ol>
-      ),
+  },
+  list: {
+    bullet: (props: PortableTextComponentProps<PortableTextBlock>) => {
+      const { children } = props;
+      return <ul className="list-disc pl-8 mb-6 space-y-2">{children}</ul>;
     },
-    marks: {
-      strong: ({ children }: any) => (
-        <strong className="font-bold">{children}</strong>
-      ),
-      em: ({ children }: any) => <em className="italic">{children}</em>,
-      underline: ({ children }: any) => <u className="underline">{children}</u>,
-      link: ({ value, children }: any) => (
+    number: (props: PortableTextComponentProps<PortableTextBlock>) => {
+      const { children } = props;
+      return <ol className="list-decimal pl-8 mb-6 space-y-2">{children}</ol>;
+    },
+  },
+  marks: {
+    strong: (props: { children?: React.ReactNode }) => {
+      const { children } = props;
+      return <strong className="font-bold">{children}</strong>;
+    },
+    em: (props: { children?: React.ReactNode }) => {
+      const { children } = props;
+      return <em className="italic">{children}</em>;
+    },
+    underline: (props: { children?: React.ReactNode }) => {
+      const { children } = props;
+      return <u className="underline">{children}</u>;
+    },
+    link: (props: PortableTextMarkComponentProps<LinkValue>) => {
+      const { value, children } = props;
+      if (!value) return <>{children}</>;
+      return (
         <a
           href={value.href}
           className="text-blue-600 hover:text-blue-800 underline transition-colors"
@@ -82,9 +115,19 @@ export default async function Post({ params }: Props) {
         >
           {children}
         </a>
-      ),
+      );
     },
-  };
+  },
+};
+
+export default async function Post({ params }: Props) {
+  // Await the promise to get the resolved params object
+  const { post: slug } = await params;
+  const post = await getPost(slug);
+
+  if (!post) {
+    notFound();
+  }
 
   return (
     <>
