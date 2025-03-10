@@ -8,12 +8,16 @@
 
 }
 
-/*.content {*/
-/*    color: var(--charcoal);*/
-/*}*/
+.postBody {
+    line-height: 1.6;
+    letter-spacing: 0.0175em;
+}
 
-/*@media (max-width: 768px) {*/
-/*    .postBody {*/
-/*        padding: 1rem 0;*/
-/*    }*/
-/*}*/
+.postBody p {
+    margin-bottom: 1.5rem;
+}
+
+.postBody img {
+    max-width: 100%;
+    height: auto;
+}

@@ -20,6 +20,72 @@ export default async function Post({ params }: Props) {
     notFound();
   }
 
+  const portableTextComponents = {
+    types: {
+      image: ({ value }: any) => (
+        <div className="my-8">
+          <img
+            src={value.asset.url}
+            alt={value.caption || " "}
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
+          {value.caption && (
+            <p className="mt-2 text-sm text-gray-500 text-center">
+              {value.caption}
+            </p>
+          )}
+        </div>
+      ),
+    },
+    block: {
+      normal: ({ children }: any) => (
+        <p className="mb-6 leading-relaxed">{children}</p>
+      ),
+      h1: ({ children }: any) => (
+        <h2 className="text-4xl font-bold mb-6 mt-12">{children}</h2>
+      ),
+      h2: ({ children }: any) => (
+        <h3 className="text-3xl font-bold mb-5 mt-10">{children}</h3>
+      ),
+      h3: ({ children }: any) => (
+        <h4 className="text-2xl font-semibold mb-4 mt-8">{children}</h4>
+      ),
+      h4: ({ children }: any) => (
+        <h5 className="text-xl font-semibold mb-3 mt-6">{children}</h5>
+      ),
+      blockquote: ({ children }: any) => (
+        <blockquote className="border-l-4 border-primary pl-4 my-6 text-gray-600 italic">
+          {children}
+        </blockquote>
+      ),
+    },
+    list: {
+      bullet: ({ children }: any) => (
+        <ul className="list-disc pl-8 mb-6 space-y-2">{children}</ul>
+      ),
+      number: ({ children }: any) => (
+        <ol className="list-decimal pl-8 mb-6 space-y-2">{children}</ol>
+      ),
+    },
+    marks: {
+      strong: ({ children }: any) => (
+        <strong className="font-bold">{children}</strong>
+      ),
+      em: ({ children }: any) => <em className="italic">{children}</em>,
+      underline: ({ children }: any) => <u className="underline">{children}</u>,
+      link: ({ value, children }: any) => (
+        <a
+          href={value.href}
+          className="text-blue-600 hover:text-blue-800 underline transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {children}
+        </a>
+      ),
+    },
+  };
+
   return (
     <>
       <div className={`${styles.postBody} md:pr-64 `}>
@@ -44,8 +110,13 @@ export default async function Post({ params }: Props) {
               <span className="mx-2">•</span>
               <span>{post.authorName}</span>
             </div>
-            <div className={`${styles.content}  p-5 text-xl text-justify`}>
-              <PortableText value={post.content} />
+            <div
+              className={`${styles.content} p-5 text-secondary text-lg md:text-xl text-justify  max-w-5xl leading-relaxed mx-auto`}
+            >
+              <PortableText
+                value={post.content}
+                components={portableTextComponents}
+              />
             </div>
           </div>
         </div>
