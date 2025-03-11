@@ -24,7 +24,7 @@ const echipa = [
 
 export default function Gallery() {
   return (
-    <div className="flex flex-col md:flex-row  w-full items-center gap-8">
+    <div className="flex flex-col md:flex-row md:h-96  w-full items-center gap-8">
       {echipa.map((member, index) => (
         <div key={index} className="flex flex-col gap-4 items-center">
           <div className={`${styles.card}`}>
