@@ -94,6 +94,13 @@
 }
 
 
+@media (max-width: 768px) {
+    .homeBanner {
+        height: 32rem;
+    }
+
+}
+
 
 
 

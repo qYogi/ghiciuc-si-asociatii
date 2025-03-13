@@ -60,13 +60,13 @@ export default async function Home() {
           />
           <h2
             rel="preload"
-            className={`text-4xl md:text-8xl font-serif font-semibold italic text-lightGray tracking-wide z-10`}
+            className={`text-4xl md:text-8xl font-[800] font-serif  italic text-lightGray tracking-wide z-10`}
           >
             Consilium et Actio
           </h2>
           <div
             className="
-              flex flex-col justify-center gap-2
+              flex flex-col text-sm md:text-lg justify-center gap-2
                z-[6]"
           >
             <h4 className="text-center">

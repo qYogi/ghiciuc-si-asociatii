@@ -152,7 +152,7 @@ export const Servicii = () => {
 
   return (
     <div
-      className={`${styles.homeServicii} flex flex-col py-24 items-center mb-10`}
+      className={`${styles.homeServicii} flex flex-col px-3 py-24 items-center mb-10`}
     >
       <h1 className="mb-10 text-5xl text-center">Servicii Juridice</h1>
       <div
@@ -177,7 +177,7 @@ export const Servicii = () => {
               >
                 <div className="mb-2 text-primary">{icon}</div>
                 <div className="flex items-center gap-2">
-                  <h2 className="text-xl font-semibold">{name}</h2>
+                  <h2 className=" text-lg md:text-xl font-semibold">{name}</h2>
                   <svg
                     viewBox="0 0 360 360"
                     className={`w-5 h-5 fill-current transition-transform ${

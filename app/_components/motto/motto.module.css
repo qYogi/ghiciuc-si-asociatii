@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;  /* two equal columns */
     align-items: center;            /* vertically center the content */
-    min-height: 500px;              /* fixed minimum height */
-    max-height: 500px;              /* fixed height so that extra space isn’t added */
+    min-height: 750px;              /* fixed minimum height */
+    max-height: 750px;              /* fixed height so that extra space isn’t added */
     background-color: var(--lightGray);
     color: var(--charcoal);
 }
@@ -27,6 +27,7 @@
 .responsiveImage {
     object-fit: cover;
     object-position: center;
+    position: fixed;
 }
 
 /* Mobile adjustments */
@@ -34,14 +35,18 @@
     .mottoContainer {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
-        min-height: auto;
+        min-height: 400px;
         max-height: none;
     }
     .imagePlaceholder {
         order: -1; /* show image first if desired */
-        min-height: 250px;
+        min-height: 350px;
     }
     .textPlaceholder {
         padding: 1rem;
+    }
+
+    .responsiveImage {
+        object-position: 30% 50% ;
     }
 }
