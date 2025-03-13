@@ -31,7 +31,7 @@ export const Motto = () => {
             alt="Avocat Iasi"
             fill
             priority
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 768px) 100vw"
             className={styles.responsiveImage}
           />
         </div>
