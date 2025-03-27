@@ -13,6 +13,7 @@ import { Motto } from "@/app/_components/motto/motto";
 import { Header } from "@/app/_components/header/header";
 import Image from "next/image";
 import Head from "next/head";
+import { Maps } from "@/app/_components/Map/Map";
 
 export default async function Home() {
   const whatsappNumber = "+40755189133";
@@ -67,7 +68,7 @@ export default async function Home() {
           })}
         </script>
         <title>
-          Avocat Iași - Consultanță Juridică Profesională | [Numele Cabinetului]
+          Avocat Iași - Consultanță Juridică Profesională | Ghiciuc & Asociații
         </title>
         <meta
           name="description"
@@ -168,6 +169,9 @@ export default async function Home() {
               >
                 <Gallery />
               </div>
+            </div>
+            <div className={` border-2 border-muted shadow-xl overflow-hidden`}>
+              <Maps />
             </div>
           </div>
 
