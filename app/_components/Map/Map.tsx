@@ -3,8 +3,6 @@ import {
   APIProvider,
   Map,
   Marker,
-  MapControl,
-  ControlPosition,
   MapCameraChangedEvent,
 } from "@vis.gl/react-google-maps";
 import { useState } from "react";
