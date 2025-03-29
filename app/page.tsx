@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import styles from "./home.module.css";
 import Link from "next/link";
 import {

@@ -1,11 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 
-// Define the props type for Maps (none needed here)
-interface MapsProps {}
-
-// Dynamically import the Maps component
-const Maps = dynamic<MapsProps>(
+const Maps = dynamic(
   () => import("@/app/_components/Map/Map").then((mod) => mod.default),
   {
     ssr: false, // Disable SSR, valid here since this is a Client Component
