@@ -122,7 +122,7 @@ export default async function Home() {
             className={`${styles.homeBanner} group gap-4 flex flex-col justify-center items-center relative`}
           >
             <Image
-              src="/column.webp"
+              src="/column_11zon.webp"
               alt="Avocat Iasi | Ghiciuc si Asociatii"
               rel="preload"
               priority
