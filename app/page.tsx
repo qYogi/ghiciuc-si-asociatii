@@ -129,7 +129,6 @@ export default async function Home() {
               fill={true}
             />
             <h2
-              rel="preload"
               className={`text-4xl md:text-8xl font-[800] font-serif  italic text-lightGray tracking-wide z-10`}
             >
               Consilium et Actio
