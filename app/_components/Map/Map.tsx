@@ -48,3 +48,5 @@ export const Maps = () => {
     </APIProvider>
   );
 };
+
+export default Maps;

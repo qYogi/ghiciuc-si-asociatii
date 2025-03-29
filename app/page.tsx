@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import styles from "./home.module.css";
 import Link from "next/link";
 import {
@@ -13,7 +14,7 @@ import { Motto } from "@/app/_components/motto/motto";
 import { Header } from "@/app/_components/header/header";
 import Image from "next/image";
 import Head from "next/head";
-import { Maps } from "@/app/_components/Map/Map";
+import { MapWrapper } from "@/app/_components/Map/MapWrapper";
 
 export default async function Home() {
   const whatsappNumber = "+40755189133";
@@ -170,7 +171,7 @@ export default async function Home() {
               </div>
             </div>
             <div className={` border-2 border-muted shadow-xl overflow-hidden`}>
-              <Maps />
+              <MapWrapper />
             </div>
           </div>
 
